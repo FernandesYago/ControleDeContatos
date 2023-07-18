@@ -1,12 +1,9 @@
 ﻿using ControleDeContatos.Models;
 
-namespace ControleDeContatos.Repositório
+namespace ControleDeContatos.Views.Repositorio
 {
-    public interface IntfContatoRepositorio
+    public interface IContatoRepositorio
     {
         ContatoModel Adicionar(ContatoModel contato);
-
-
-
     }
 }
