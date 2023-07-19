@@ -1,5 +1,5 @@
 ﻿using ControleDeContatos.Models;
-using ControleDeContatos.Views.Repositorio;
+using ControleDeContatos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 
@@ -29,6 +29,7 @@ namespace ControleDeContatos.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Criar(ContatoModel contato)
         {

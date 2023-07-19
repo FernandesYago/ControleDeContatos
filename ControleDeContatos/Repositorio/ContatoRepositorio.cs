@@ -1,7 +1,7 @@
 ﻿using ControleDeContatos.Data;
 using ControleDeContatos.Models;
 
-namespace ControleDeContatos.Views.Repositorio
+namespace ControleDeContatos.Repositorio
 {
     public class ContatoRepositorio : IContatoRepositorio
     {

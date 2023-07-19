@@ -1,5 +1,5 @@
 ﻿using ControleDeContatos.Data;
-using ControleDeContatos.Views.Repositorio;
+using ControleDeContatos.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -19,12 +19,13 @@ namespace ControleDeContatos
 
         public void ConfigureServices(IServiceCollection services)
         {
-           services.AddControllersWithViews();
+            services.AddMvc();
+            services.AddControllersWithViews();
             services.AddEntityFrameworkSqlServer()
                 .AddDbContext<BancoContext>(o=> o.UseSqlServer(Configuration.GetConnectionString("DataBase")));
-            services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+           services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
         }
-
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // Configurações de ambiente, middlewares, etc.
